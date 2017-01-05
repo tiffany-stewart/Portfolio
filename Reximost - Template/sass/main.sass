@@ -1,0 +1,164 @@
+/***********************************************************************************
+ *	+ [Master Stylesheet]
+
+ *	+ Reximost - Personal Portfolio HTML Template
+ *	+ Autor: Brainiak
+ *	+ Version: 1.0
+ *	+ Last change: 14.11.2016
+ ***********************************************************************************/
+
+/***********************************************************************************
+ *	+ [Table of contents]
+ *	+ 
+ *	+ 1. Body
+ *	+ 	2. Header / header
+ *	+ 		2.1. Navigation / .top-menu
+ *	+ 		2.2. Mobile navigation / .mobile-menu
+ *	+ 	3. Slider / .slider
+ *	+ 		3.1. Slide / .slide
+ *	+ 		3.2. Control slider / .control-slider
+ *	+ 			3.2.1. Pagination slider / .dots-control
+ *	+ 			3.2.2. Prev/Next buttons / .prev-next
+ *	+ 	2. Under slider / .socialite
+ *	+ 	3. About / .describe
+ *	+ 	4. Features / .features
+ *	+ 	5. Portfolio / .portfolio
+ *	+ 	6. Testimonials / .testimonials
+ *	+ 	7. Contact informations / .contact-info
+ *	+ 	8. Contact form / .form-contact
+ *	+ 	9. Footer / footer
+ *	+ 		9.1. Social inons / .social-inons
+ *	+ 		9.2. Navigation / .footer-menu
+ *	+ 	10. Icon to top / .top
+ ***********************************************************************************/
+
+/***********************************************************************************
+ *	+ COLOR SCHEME:
+	 *	+ Accent color: #c69c6d
+	 *	+ Dark accent: #585858
+ ***********************************************************************************/
+
+@import "bourbon" //Bourbon mixin library for Sass
+@import "vars.sass" //Variables
+@import "reset.scss" //reset styles
+@import "mixins.sass" //Some mixins
+
+html .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.6
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	text-rendering: optimizeLegibility
+
+h1,h2,h3,h4,h5,h6
+	font-weight: 700
+	line-height: 1.3
+
+h1
+	font-size: rem(50px)
+
+h2
+	font-size: rem(24px)
+
+h3
+	font-size: rem(19px)
+
+h4
+	font-size: rem(18px)
+
+h5
+	font-size: rem(17px)
+
+h6
+	font-size: rem(16px)
+
+a
+	outline: none!important
+	color: $accent-color
+	&:focus
+		color: $accent-color
+	&:hover
+		color: shade($accent-color, 10%)
+i
+	line-height: inherit!important
+img
+	height: auto
+strong
+	font-weight: 700
+@import "components.sass" //Compononts for template
+@import "layout.sass" //Sections code
+@import "animation.sass" //Animation
+
+.hidden
+	display: none
+.text-right
+	text-align: right
+.text-left
+	text-align: left
+	h2
+		&:after
+			margin: 19px 0 18px
+.text-center
+	text-align: center
+#top-nav-sticky-wrapper
+	height: 0!important
+.search-form	
+	input
+		background: #fff
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		border-radius: 4px
+		padding: 10px
+		width: 100%
+		font-size: 14px
+		color: #555
+		&:focus
+			box-shadow: none
+			color: #555
+			border-color: #9c9c9c
+input:focus, input:active, textarea:focus, textarea:active
+	box-shadow: none
+	border-color: $accent-color
+	opacity: 1!important
+input:focus, .form-control:focus
+	outline: none
+	box-shadow: none
+
+@import "media.sass" //Media queries
+
+
+
+
+
+
+
+
+
+
+
+

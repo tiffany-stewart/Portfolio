@@ -1,0 +1,827 @@
+@import "bourbon"
+@import "vars.sass"
+
+/*<-------------------------- START Components css code ---------------------------->*/
+
+section
+	padding-top: 100px
+	padding-bottom: 90px
+	background-size: cover
+	p
+		margin-top: 20px
+.btn
+	font-size: rem(14px)
+	border-radius: 30px
+	color: $white
+	font-family: "Open Sans", sans-serif
+	padding: 10px 30px 10px 30px
+	display: inline-block
+	text-transform: uppercase
+	font-weight: 600
+	transition: all ease .4s
+	line-height: 21px
+	border: none
+	&:hover
+		color: $white
+		text-decoration: none
+.btn-form
+		padding: 14px 32px
+		border-radius: 4px
+.btn-dark
+	background-color: #424242
+	&:hover
+		background-color: $accent-color
+.btn-blue
+	background-color: $accent-color
+	&:hover
+		background-color: shade($accent-color, 10%)
+.button-section
+	.btn
+		&:nth-child(2n+1)
+			margin-right: 20px
+.notify
+	display: block
+	background-color: shade($accent-color, 40%)
+	color: $white
+	text-align: center
+	padding: 3px
+/*Start Heading title*/
+.heading-title
+	text-align: center
+	margin-bottom: 79px
+	h2
+		line-height: rem(30px)
+		font-weight: 600
+		letter-spacing: 1px
+		text-transform: uppercase
+		font-family: $roboto-slab
+		color: #585858
+		&:after
+			content: ""
+			display: block
+			height: 2px
+			width: 60px
+			background-color: $accent-color
+			margin: 0 auto
+			margin-top: 19px
+			margin-bottom: 18px
+		span
+			font-size: rem(31px)
+			color: $accent-color
+			padding-left: 5px
+			padding-right: 5px
+			span
+				color: $accent-color!important
+	p
+		font-size: rem(17px)
+		font-weight: 400
+		color: #606060
+		letter-spacing: 0.3px
+
+/*Start Custom dots Slick slider*/
+.dots
+	display: block
+.dots-control,.dots
+	margin: 0
+	padding: 0
+	li
+		float: left
+		list-style: none
+		margin-right: 12px
+		&:last-child
+			margin-right: 0
+		button
+			font-size: 0px
+			padding: 0
+			height: 15px
+			width: 15px
+			border-radius: 50%
+			outline: none
+			border: 3px solid $accent-color
+			display: block
+			background: none
+			opacity: 0.60
+	.slick-active	
+		button
+			opacity: 1
+			background-color: $accent-color
+
+/*Start PREV & NEXT CONTROL SLIDER*/
+
+.prev-next-block
+	transition: all ease .5s
+	.slick-arrow
+		color: $white
+	.prev,.next	
+		height: 30px
+		position: absolute
+		top: 50%
+		font-size: rem(67px)
+		color: $white
+		opacity: 0.5
+		cursor: pointer
+		margin-top: -20px
+		transition: all ease .6s
+		&:hover
+			opacity: 1
+		i
+			vertical-align: top
+			line-height: 29px!important
+	.prev
+		left: -90px
+	.next
+		right: -90px
+
+/*Icons*/
+.section-class-item
+	padding-bottom: 71px
+	padding-top: 71px
+	.icon-wrap
+		font-size: rem(45px)
+		width: 63px
+		height: 63px
+		border-radius: 15px
+		text-align: center
+		color: $white
+		background-color: $accent-color
+		box-shadow: 0px 0 10px #e9e9e9
+		display: block
+		transition: all ease .5s
+		line-height: 63px
+	&:hover
+		.icon-wrap
+			background-color: $accent-color
+	h3
+		color: #555555
+		font-size: rem(17px)
+		font-weight: 600
+		text-transform: uppercase
+
+	p
+		font-size: rem(15px)
+		color: #8c8c8c
+		margin-top: 5px
+
+.items-right
+	.item-icon
+		padding-left: 20px
+
+.item-text,
+.item-icon
+	display: table-cell
+	vertical-align: top
+	.item-icon
+		padding-right: 20px
+
+/*Start Heding title big*/
+
+.heading-title-big
+	color: #1d1c1c
+	font-size: rem(70px)
+	line-height: rem(64px)
+	font-weight: 500
+	font-family: $roboto-slab
+	margin: 0
+.horizontal-line
+	display: block
+	padding-top: 3px
+	padding-bottom: 12px
+	span
+		width: 120px
+		height: 2px
+		display: inline-block
+		text-align: center
+		background-color: $accent-color
+
+/*Start Toggle menu - button*/
+
+.toggle-mnu 
+	float: right
+	display: block
+	width: 28px
+	height: 28px
+	top: 7px
+	position: relative
+	cursor: pointer
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 3px
+		background-color: #000
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before
+		background-color: #000 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after
+		background-color: #000 
+		transform: rotate(-45deg) translate(6px, -7px)
+body:not(.header-fixed) .logo,.toggle-mnu
+	z-index: 1001
+
+/*Start Mobile full screen menu*/
+
+#mobile-menu
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: none
+	z-index: 444
+	background-color: $white
+	> .inner-wrap
+		position: absolute
+		top: 50%
+		left: 0
+		width: 100%
+		max-height: 100%
+		overflow-y: auto
+		text-align: center
+		padding: 100px 0
+		transform: translateY(-50%)
+		> nav > .nav_menu
+			margin: 0
+			padding: 0 0 5px 0
+			list-style-type: none
+			ul
+				margin: 0
+				padding: 0 0 5px 0
+				list-style-type: none
+	.nav_menu
+		li
+			opacity: 0
+			transform: translateY(0)
+			transition: all .3s cubic-bezier(0.23, 1, 0.32, 1)
+			transition-delay: 0s
+		a
+			display: inline-block
+			padding: 8px 0
+			text-decoration: none
+			font-size: 32px
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 800
+			text-transform: uppercase
+			letter-spacing: 1px
+			color: #000
+			transition: all ease 0.50s
+			span
+				color: $accent-color
+			&:hover
+				color: $accent-color
+		.sub-menu
+			display: none
+			a
+				text-transform: capitalize
+				padding: 2px 0
+				font-size: rem(18px)
+				letter-spacing: 1px
+		li.menu-item-has-children > a
+			&::after
+				content: '\f107'
+				font-family: 'FontAwesome'
+				margin-left: 4px
+				position: relative
+				right: -5px
+			&.sub-active
+				color: $accent-color
+				&::after
+					content: '\f106'
+	li
+		&.current-menu-item > a, &.current-page-item > a
+			color: #000
+#mobile-menu.active
+	.nav_menu
+		li
+			opacity: 1
+			transform: translateY(-1rem)
+			transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1)
+			&:nth-of-type(1)
+				transition-delay: .5s
+			&:nth-of-type(2)
+				transition-delay: .6s
+			&:nth-of-type(3)
+				transition-delay: .7s
+			&:nth-of-type(4)
+				transition-delay: .8s
+			&:nth-of-type(5)
+				transition-delay: .9s
+			&:nth-of-type(6)
+				transition-delay: 1s
+			&:nth-of-type(7)
+				transition-delay: 1.2s
+			&:nth-of-type(8)
+				transition-delay: 1.3s
+			&:nth-of-type(9)
+				transition-delay: 1.4s
+			&:nth-of-type(10)
+				transition-delay: 1.5s
+
+/*Start Custom superfish top menu*/
+
+.sf-menu
+	margin-bottom: 0
+	a
+		padding: 0
+		padding: 0 18px
+		border: none
+		color: #606060
+		text-decoration: none
+	> li
+		font-family: $roboto-slab
+		font-weight: 500
+		background-color: transparent
+		padding: 34px 0px 34px 0
+		&:last-child
+			a
+				padding-right: 0
+		&:hover
+			background-color: transparent
+		&.sfHover
+			background: none
+			> a
+				color: $accent-color
+		> a
+			border-bottom: 0 solid transparent
+			transition: all .5s ease
+			color: #1d1c1c
+			font-size: 14px
+			text-transform: uppercase
+			letter-spacing: 0.2px
+			span
+				color: $accent-color
+			&:hover
+				color: $accent-color
+			+ *
+				a
+					transition: all .25s ease
+					&:hover
+						color: $white
+	ul
+		border-radius: 0 0 4px 4px
+		min-width: auto
+		box-shadow: none
+		background-color: $white
+		li
+			background: none
+			border-bottom: 1px dashed rgba(0, 0, 0, 0.1)
+			&:last-child
+				border-radius: 0px 0px 4px 4px
+				a
+					padding-bottom: 10px
+			&:hover
+				background-color: $accent-color
+			a
+				padding: 7.5px 25px 7.5px
+
+.sf-arrows
+	.sf-with-ul
+		padding: 0 25px 0 25px
+		a
+			outline: none
+			padding: 0
+		&:after
+			border-top-color: #606060
+			transition: all .25s ease
+			margin-top: 0px
+			right: 25px
+			margin-right: -22px
+	li
+		.sf-with-ul:focus:after,&:hover > .sf-with-ul:after
+			border-top-color: $accent-color
+	.sfHover
+		.sf-with-ul:after
+			border-top-color: $accent-color
+.sf-menu 
+	li
+		.sfHover
+			background: rgba(0,0,0,0.30)
+
+.is-sticky
+	header
+		background-color: $white
+		border-bottom: 1px solid #eee
+		box-shadow: 2px 2px 50px #ddd
+		.logo
+			padding: 13px 0px 9px 0px
+			color: $accent-color!important
+		.dark-logo
+			color: #000
+		.sf-menu
+			a
+				color: $dark-accent
+			>li
+				padding-top: 16px
+				padding-bottom: 16px
+				&.sfHover
+					background: none
+					> a
+						color: $accent-color
+				> a
+					border-bottom: 0 solid transparent
+					transition: all .5s ease
+					color: $dark-accent
+					&:hover
+						color: $accent-color
+			ul
+				border-top: 2px solid $accent-color
+				background-color: $white
+				li
+					border-bottom: 1px dashed rgba(0, 0, 0, 0.1)
+					&:last-child
+						border-bottom: none
+					&:hover
+						background-color: $white-blue-background
+						a
+							color: $dark-accent
+		.sf-arrows		
+			li
+				> .sf-with-ul:after
+					border-top-color: $dark-accent
+				.sf-with-ul:focus:after,&:hover > .sf-with-ul:after
+					border-top-color: $accent-color
+			.sfHover
+				.sf-with-ul:after
+					border-top-color: $accent-color
+	.toggle-mnu
+		top: 19px
+		span, span:after, span:before
+			background-color: $dark-accent
+		&.on span 
+			background-color: transparent
+
+		&.on span:before
+			background-color: #000 
+			transform: rotate(45deg) translate(-1px, 0px)
+
+		&.on span:after
+			background-color: #000 
+			transform: rotate(-45deg) translate(6px, -7px)
+
+/*Background mask*/
+
+.bg-mask
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		left: 0
+		background-color: rgba($dark-accent, 0.85)
+		z-index: 1
+	.container
+		position: relative
+		z-index: 3
+.bg-mask-white
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		left: 0
+		background-color: rgba($white, 0.85)
+		z-index: 1
+	.container
+		position: relative
+		z-index: 3
+.bg-mask-white-30
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		left: 0
+		background-color: rgba($white, 0.10)
+		z-index: 1
+	.container
+		position: relative
+		z-index: 3
+.bg-mask-dark
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		left: 0
+		background-color: rgba(#000, 0.85)
+		z-index: 1
+	.container
+		position: relative
+		z-index: 3
+.bg-mask-black
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		left: 0
+		background-color: rgba(#000, 0.85)
+		z-index: 1
+	.container
+		position: relative
+		z-index: 3
+.bg-mask-black-30
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		left: 0
+		background-color: rgba(#000, 0.40)
+		z-index: 1
+	.container
+		position: relative
+		z-index: 3
+.controls-portfolio
+	ul
+		margin-bottom: 50px
+		li
+			display: inline-block
+			font-size: 14px
+			font-family: "Open Sans", sans-serif
+			color: #606060
+			text-transform: uppercase
+			letter-spacing: 0.5px
+			font-weight: 600
+			margin-right: 30px
+			cursor: pointer
+			&:last-child
+				margin-right: 0
+		.active
+			color: $accent-color
+.slide-out
+	position: relative
+	.container-slide
+		z-index: 3
+		position: relative
+	.back-slider
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		margin: 0 auto
+		z-index: 0
+		.slide
+			height: 100vh
+
+/*Text with background block*/
+
+.text-background
+	background-color: #f4f4f4
+	padding: 20px
+	border-left: 3px solid $accent-color
+	p
+		color: #5c5c5c
+
+/*White color block*/
+
+.white-color
+	color: $white
+	.heading-title
+		h2, p
+			color: $heading-title-light
+
+/*Back to top link*/
+
+.top
+	position: fixed
+	bottom: 20px
+	right: 20px
+	z-index: 10
+	display: none
+	a
+		color: $white !important
+		background-color: $accent-color
+		display: block
+		text-align: center
+		width: 45px
+		height: 45px
+		line-height: 45px
+		border-radius: 2px
+		opacity: 0.7
+		transition: all ease .6s
+		i
+			font-size: 25px
+			vertical-align: middle
+		&:hover
+			opacity: 1
+			color: $white
+
+/*Page loader*/
+
+.pace
+	pointer-events: none
+	user-select: none
+.pace-inactive
+	display: none
+.pace
+	.pace-progress
+		background: $accent-color
+		position: fixed
+		z-index: 2000
+		top: 0
+		right: 100%
+		width: 100%
+		height: 2px
+	.pace-progress-inner
+		display: block
+		position: absolute
+		right: 0px
+		width: 100px
+		height: 100%
+		box-shadow: 0 0 10px $accent-color, 0 0 5px $accent-color
+		opacity: 1.0
+		transform: rotate(3deg) translate(0px, -4px)
+	.pace-activity
+		display: block
+		position: fixed
+		z-index: 2000
+		top: 15px
+		right: 15px
+		width: 14px
+		height: 14px
+		border: solid 2px transparent
+		border-top-color: $accent-color
+		border-left-color: $accent-color
+		border-radius: 10px
+		animation: pace-spinner 400ms linear infinite
+@keyframes pace-spinner
+	0%
+		transform: rotate(0deg)
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+		transform: rotate(360deg)
+
+/*Icon with text*/
+
+.text-with-icon
+	.section-class-item
+		&:hover
+			.icon-wrap
+				background: none!important
+				color: shade($accent-color, 10%)
+	.item-icon
+		.icon-wrap
+			width: 40px
+			height: 40px
+			font-size: 35px
+			line-height: 40px
+			background: none
+			color: #555
+			box-shadow: none
+	.item-text
+		padding-left: 20px
+		vertical-align: middle
+		p
+			color: #5c5c5c
+			margin-top: 0
+.icon-circle-border
+	padding: 0
+	.item-icon
+		vertical-align: middle
+		.icon-wrap
+			border-radius: 50%
+			font-size: 40px
+			box-shadow: 1px 0 3px #f3f3f3
+			width: 85px
+			height: 85px
+			line-height: 75px
+			background-color: $white
+			color: $accent-color
+			margin-right: 30px
+			border: 5px solid #e0e6ec
+			transition: all ease .5s
+	&:hover
+		.icon-wrap
+			// background-color: $accent-color!important
+			color: $white!important
+			border-color: $accent-color!important
+
+	.icon-services
+		&:after
+			border-radius: 50%!important
+
+/*Hero background*/
+
+.hero-bg
+	animation: hero-bg 90s linear infinite
+
+/*Social icons*/
+
+.social-inons
+	ul
+		li
+			font-size: 17px
+			display: inline-block
+			border: 5px solid shade($accent-color, 20%)
+			border-radius: 50%
+			width: 50px
+			height: 50px
+			margin-right: 10px
+			background-color: $accent-color
+			&:last-child
+				margin-right: 0
+			&:hover
+				background-color: $accent-color
+			a
+				color: $white
+				display: block
+				line-height: 38px
+				text-align: center
+				i
+					vertical-align: middle
+
+/*Contact form*/
+
+.contact-form
+	.btn-form
+		margin-top: 25px
+	input[type=text],input[type=email]
+		margin-bottom: 30px
+input[type=text],input[type=email],textarea
+	background: #fff
+	border: none
+	border-radius: 2px
+	border-bottom: 2px solid #ccc
+	color: #606060
+	padding: 17px 20px
+	width: 100%
+	font-size: rem(15px)
+	transition: all ease .6s
+	letter-spacing: 0.5px
+	@include placeholder
+		color: #585858
+	&:hover
+		border-color: $accent-color
+	&:focus
+		border-color: $accent-color
+
+/*Canvas background*/ 
+
+.canvas-background
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 2
+
+/*Avatar*/
+.avatar-90
+	width: 90px
+.avatar-80
+	width: 80px
+
+/*White form*/
+.white-form
+	input[type="email"], input[type="text"], textarea
+		background-color: $white-blue-background
+		color: #555
+	::-webkit-input-placeholder
+		color: #5c5757
+	input:focus, input:active, textarea:focus, textarea:active
+		border-color: $accent-color!important
+
+/*<-------------------------- END Components css code ---------------------------->*/

@@ -1,0 +1,321 @@
+@import "bourbon"
+@import "vars.sass"
+
+/* Desktop First Method */
+@media only screen and (max-width : 1350px)
+	.prev-next-block
+		display: none
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/*Start Our Features section*/
+	.features
+		.icon-container
+			&:after
+				width: 30px
+				height: 1px
+				border-top: 2px dashed #ccc
+				position: absolute
+				right: -15px
+				top: 28%
+		.button-section
+			margin-top: 50px
+	// Other
+	.avatar-80
+		width: 50px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+	header
+		.top-menu
+			display: none
+		.logo
+			padding: 14px 0 10px 20px
+		.toggle-mnu
+			top: 23px
+			right: 20px
+	.heading-title-big
+		font-size: rem(45px)
+		line-height: rem(55px)
+	/*Start Slider section*/
+	.slider	
+		.slide
+			.content-slide
+				.description
+					p
+						font-size: rem(17px)
+	.slick-slide 
+		.iphone
+			img
+				width: 100%
+
+	/*Start Socialite section*/
+	.socialite
+		padding-top: 15px
+		padding-bottom: 15px
+		.container-socialite
+			.item
+				img
+					width: 95px
+			.icon-down
+				width: 55px
+				height: 55px
+				top: -41px
+				a
+					width: 40px
+					height: 40px
+					font-size: rem(33px)
+					top: 7.5px
+					line-height: rem(45px)
+
+	/*Start Our Features section*/
+	.features
+		.icon-container
+			&:after
+				display: none
+		.item-icon
+			&:first-child,&:nth-child(2)
+				margin-bottom: 50px
+			
+	/*Describe*/
+	.describe
+		.heading-title
+			margin-top: 30px
+			margin-bottom: 0
+	/*Blog*/
+	.comment-list
+		.children
+			li
+				padding-left: 50px
+	/*Start footer*/
+	footer
+		.bottom-footer
+			text-align: center
+			.footer-menu
+				margin-top: 20px
+				ul
+					text-align: center
+	/*Blog*/
+	.comment-list
+		.children
+			.children
+				li
+					padding-left: 50px
+	ul.social-sharing
+		li
+			width: 19.99999%
+			&:first-child
+				display: none
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	/*Fixed header*/
+	.is-sticky
+		header
+			.logo
+				padding: 14px 10px 10px 20px
+	/*Start slider*/ 
+	.slider
+		.slide
+			.right,.left
+				text-align: center
+				.buttons-download
+					text-align: center
+
+	/*Start Socialite*/
+	.socialite
+		padding-top: 10px
+		padding-bottom: 10px
+		.item
+			height: 26px
+			img
+				width: 80px
+		.container-socialite
+			.icon-down
+				width: 45px
+				height: 45px
+				top: -30px
+				a
+					width: 32px
+					height: 32px
+					font-size: rem(30px)
+					top: 7px
+					line-height: rem(34px)
+
+	/*Start Our Features section*/
+	.features
+		.icon-container
+			&:after
+				display: none
+		.item-icon
+			margin-bottom: 50px
+			&:last-child
+				margin-bottom: 0
+	/*Contact block*/
+	.contacn-block
+		.section-class-item
+			margin-bottom: 20px
+			display: block
+		&:last-child
+			.section-class-item
+				margin-bottom: 0
+	/*Start footer*/ 
+	footer
+		.bottom-footer
+			text-align: center
+		// Other
+	.avatar-80
+		width: 80px
+	.single-blog 
+		padding: 0 20px 40px
+	.blog-page
+		.single-blog
+			.heading-title
+				text-align: left!important
+				h2
+					&:after
+						margin: 19px 0 18px!important
+	.author-bio
+		.profile-img
+			padding-bottom: 20px
+	#sidebar
+		background: #f8f8f8
+		&:before
+			position: absolute
+			height: 0
+			width: 0
+			top: 0
+			bottom: 0
+			right: 0
+			background: #f8f8f8
+			z-index: -1
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+
+	section
+		padding-top: 50px
+		padding-bottom: 40px
+	.heading-title
+		margin-bottom: 50px
+	.contact-form
+		p
+			margin-top: 0
+	/*Prev and next buttons*/
+	.prev-next-block
+		display: block
+		.prev
+			left: 0
+		.next
+			right: 0
+
+	.text-left 
+		h2
+			&:after
+					margin: 19px auto 18px!important
+	.heading-title-big
+		font-size: rem(38px)
+		line-height: rem(47px)
+	.heading-title
+		h2
+			line-height: rem(40px)
+	/*Start slider*/
+	.slider
+		.control-slider
+			display: none
+		.container-slide
+			padding-bottom: 70px
+		.buttons-download
+			.download
+				margin-bottom: 0!important
+				&:first-child
+					margin-bottom: 10px
+				&:last-child
+					margin-right: 0
+		.slide
+			.content-slide
+				.description
+					p
+						font-size: rem(14px)
+						line-height: rem(25px)
+	/*Start  Socialite*/
+	.socialite
+		display: none
+
+	.text-left, .text-right
+		text-align: center!important
+	.section-class-item
+		padding-top: 0
+
+	.full-slider
+		.vertical-align
+			.content-mill
+				padding-top: 15px
+			.container-slide
+				padding-top: 70px
+				padding-bottom: 70px
+	.button-section
+		text-align: center
+		.btn
+			margin-top: 10px
+			margin-right: 10px
+			font-size: 12px
+			&:last-child
+				margin-right: 0
+
+@media only screen and (max-width : 320px)
+	/**/
+	.triangle
+		&:before
+			bottom: -1px
+	/*Social icons*/
+	.social-inons
+		ul
+			li
+				font-size: rem(14px)
+				border: 3px solid shade($accent-color, 20%)
+				border-radius: 50%
+				width: 38px
+				height: 38px
+				margin-right: 7px
+				&:last-child
+					margin-right: 0
+				&:hover
+					background-color: $accent-color
+				a
+					color: $white
+					display: block
+					line-height: rem(31px)
+					text-align: center
+					i
+						vertical-align: middle
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	.toggle-mnu
+		display: none
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/*Slider*/
+
